@@ -1,0 +1,111 @@
+name: Tester feedback
+description: Tell us how Towardsalah did during your test week (takes ~3 minutes).
+title: "[Feedback] "
+labels: ["tester-feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        JazakAllahu khairan for testing Towardsalah! Answer what you can; every field except the first two is optional.
+        **Tip:** in the app, Settings → About → **Open log folder**, then drag `towardsalah.log` into the last box. It shows when each reminder appeared and nothing else personal beyond your chosen city.
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Your computer
+      options:
+        - Windows 11
+        - Windows 10
+        - Mac (Apple Silicon – M1/M2/M3/M4)
+        - Mac (Intel)
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: city
+    attributes:
+      label: City you set in the app
+      placeholder: e.g. Hyderabad
+    validations:
+      required: true
+
+  - type: dropdown
+    id: days
+    attributes:
+      label: How many days did you use it?
+      options: ["1–2", "3–4", "5–6", "7 or more"]
+
+  - type: dropdown
+    id: every-reminder
+    attributes:
+      label: Did a reminder appear for every prayer while your computer was on?
+      options:
+        - Yes, every time
+        - Missed once
+        - Missed a few times
+        - Missed often
+
+  - type: dropdown
+    id: on-time
+    attributes:
+      label: Were the prayer times correct for your masjid / local timetable?
+      options:
+        - Yes, matched (within 1–2 min)
+        - Some were a few minutes off
+        - Some were very wrong
+        - I didn't check
+
+  - type: textarea
+    id: wrong-times
+    attributes:
+      label: If times were off, which prayer and by how much?
+      placeholder: e.g. Isha showed 8:05 PM, our masjid says 8:15 PM
+
+  - type: dropdown
+    id: annoying
+    attributes:
+      label: Was it ever annoying or in the way?
+      description: e.g. stole your typing focus, covered something, popped up at a bad moment
+      options:
+        - Never
+        - Once or twice
+        - Often
+
+  - type: dropdown
+    id: mascot
+    attributes:
+      label: Did the mascot look right? (no boxes, cut-off edges or blurry)
+      options:
+        - Looked great
+        - Small glitches
+        - Looked broken
+
+  - type: dropdown
+    id: crash
+    attributes:
+      label: Did the app ever crash, freeze or disappear from the tray / menu bar?
+      options:
+        - No
+        - Yes, once
+        - Yes, more than once
+
+  - type: dropdown
+    id: keep
+    attributes:
+      label: Would you keep using it after the test week?
+      options:
+        - Yes
+        - Maybe
+        - No
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else? What did you like, what would you change?
+
+  - type: textarea
+    id: log
+    attributes:
+      label: Log file (optional)
+      description: Drag towardsalah.log here. Screenshots of anything odd are welcome too.
